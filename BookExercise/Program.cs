@@ -15,6 +15,7 @@ namespace BookExercise
             Console.WriteLine("Toinen kirja: " + book2.title);
 
             Book book3 = new Book("Historia 4" + " Salonen" + " Matti " + 22.50);
+            Console.WriteLine(book3.GetBookInformation());
 
         }
     }

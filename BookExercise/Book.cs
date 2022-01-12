@@ -36,5 +36,15 @@ namespace BookExercise
             this.id = id;
             this.price = price;
         }
+
+        public string GetBookInformation()
+            {
+                return $"{this.author}, {this.title}, {this.id}, {this.price:F2}";
+            //    return this.author + ", " + this.title + ", " + this.id + ", " + this.price;
+            }
+            
+        
+        
+            
     }
 }
