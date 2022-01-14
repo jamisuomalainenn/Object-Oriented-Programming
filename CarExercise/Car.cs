@@ -7,13 +7,13 @@ namespace CarExercise
     class Car
     {
         public string brand;
-        public int speed;
+        public double speed;
 
         public Car()
         {
         }
 
-        public Car(string brand, int speed)
+        public Car(string brand, double speed)
         {
             this.brand = string.Empty;
             this.speed = 0;
@@ -22,27 +22,31 @@ namespace CarExercise
         {
             Console.WriteLine("Wich brand is your car?");
             this.brand = Console.ReadLine();
-            Console.WriteLine("What is your car's max speed?");
-            if (int.TryParse(Console.ReadLine(), out this.speed))
+            Console.WriteLine("What is your car's max speed?");         //tässä käyttäjältä kysytään tiedot
+            if (double.TryParse(Console.ReadLine(), out this.speed))
             {
-                this.speed = 0;                                 //jos syöttö epäonnistuu, ohjelma ei kaadu
+                Console.WriteLine(this.speed);                                 //jos syöttö epäonnistuu, ohjelma ei kaadu
             }
-                                                                //this.speed = Convert.ToInt32(Console.ReadLine());
+            else
+            {
+                this.speed = 0;
+            }
+                                                                
         }
 
-        public void ShowCarInfo()
+        public void ShowCarInfo()    //käyttäjän ilmoittamat tiedot
         {
-            Console.WriteLine($"Auton merkki on {this.brand} ja huippunopeus on {this.speed}");
+            Console.WriteLine($"Auton merkki on {this.brand} ja nopeus on {this.speed}");
         }
 
-        public void Accelerate(int value)
+        public void Accelerate(double value)    //program.cs puolella ilmoitetut arvot lisätään lukuun
         {
             this.speed += value;
         }
 
-        public void Brake()
+        public void Brake() //nopeus vähenee 10%, alla oleva kaava vähentää ilmoitetusta luvusta 10%
         {
-            this.speed /= 1;
+            this.speed *= 0.9;
         }
     }
 }
