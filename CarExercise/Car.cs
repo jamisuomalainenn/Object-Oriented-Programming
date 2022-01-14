@@ -11,13 +11,10 @@ namespace CarExercise
 
         public Car()
         {
-        }
-
-        public Car(string brand, double speed)
-        {
             this.brand = string.Empty;
             this.speed = 0;
         }
+
         public void AskData()
         {
             Console.WriteLine("Wich brand is your car?");
