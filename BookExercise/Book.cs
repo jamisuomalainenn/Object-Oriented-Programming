@@ -70,11 +70,13 @@ namespace BookExercise
             }
             else
             {
-                Console.WriteLine("Kirjat ovat saman hintaisia");
+                Console.WriteLine($"{this.title} on saman hintainen kuin {book.title}");
             }
-/*            Console.WriteLine($"Kutsuva olio: {this.title} {this.price}");
-            Console.WriteLine($"Parametrinä tuleva olio: {book.title} {this.price}");
-*/
+
+            Console.WriteLine($"Kutsuva olio: {this.title} {this.price}");
+
+            Console.WriteLine($"Parametrinä tuleva olio: {book.title} {book.price}");
+
 
         }
             

@@ -8,11 +8,9 @@ namespace BookExercise
         {
             Console.WriteLine("This is Book exercise!");
             Book book1 = new Book("Matematiikka 1 ", "Salonen Matti", "00001", 15.99);
-            /*book1.title = "Matematiikka 1";
-            book1.author = "Salonen " + "Matti";
-            book1.id = "00001";                         //Kommentoitu osio on korvattu nopeammalla
-            book1.price = 15.99;*/                      //tavalla. Näin saadaan koodi yhdelle riville ja saadaan tilaa
-            //book1.SetId("joops");
+                                                                                        //Kommentoitu osio on korvattu nopeammalla
+                                                                                        //tavalla. Näin saadaan koodi yhdelle riville ja saadaan tilaa
+            
             Console.WriteLine("Ensimmäinen kirja: " + book1.title + book1.id);
             
             Book book2 = new Book("Aapinen", "Aaltonen Antti", "00002", 20.00);
