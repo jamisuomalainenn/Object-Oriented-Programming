@@ -35,14 +35,14 @@ namespace CompanyExercise
             gigantti.title = "Gigantti";
             gigantti.address = "Myllymäki 50, 53850 Lappeenranta";
             gigantti.phone = "045 8529632";
-            gigantti.outcome = 1000000000;
+            gigantti.outcome = 105000;
             gigantti.expense = 300000;
             gigantti.printInfo();
             //Console.WriteLine("Gigantti-olio: " + gigantti.ToString());
             gigantti.Voitot();
 
             Console.WriteLine("\n\nMotonet");
-            Company motonet = new Company($"Motonet", "Hiessillankatu 4, 53700 Lappeenranta", "0404561236", 75000540, 620000);
+            Company motonet = new Company($"Motonet", "Hiessillankatu 4, 53700 Lappeenranta", "0404561236", 15000, 6200);
             motonet.printInfo();
             //Console.WriteLine("Motonet-olio: " + motonet.ToString());
             motonet.Voitot();
