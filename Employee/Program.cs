@@ -7,11 +7,11 @@ namespace Employee
         static void Main(string[] args)
         {
             Console.WriteLine("Luodaan Employee-olioita ja tallennetaan ne taulukkoon.");
-            Employee[] employees = new Employee[4];
-            employees[0] = new Employee("Jami Suomalainen", 12354, "Pomo", 50000);
-            employees[1] = new Employee("Miro Miettinen", 45684, "Rivimies", 1000);
-            employees[2] = new Employee("Eetu Haimi", 78468, "Sihteeri", 7855);
-            employees[3] = new Employee("Niko Keskinen", 45685, "Koodaaja", 32000);
+            Employee[] employees = new Employee[4]; //asetetaan taulukon koko
+            employees[0] = new Employee("Jami Suomalainen", "1232344574", "Pomo", 50000);  //tässä on testi, että toimiiko SetID komento.
+            employees[1] = new Employee("Miro Miettinen", "12874", "Rivimies", 1000);
+            employees[2] = new Employee("Eetu Haimi", "12124", "Sihteeri", 7855);
+            employees[3] = new Employee("Niko Keskinen", "12354", "Koodaaja", 32000);
             Console.WriteLine($"employees taulukossa on {employees.Length} Employee-oliota.\n");
             for (int i = 0; i < employees.Length; i++)
             {

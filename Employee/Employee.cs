@@ -7,18 +7,22 @@ namespace Employee
     class Employee
     {
         public string name;
-        public int id;
+        public string id;
         public string job;
         public double salary;
         public Employee()
         {
-
+            //tässä asetetaan oletusarvoksi 0 tai tyhjä
+            this.name = string.Empty;
+            this.id = string.Empty;
+            this.job = string.Empty;
+            this.salary = 0;
         }
 
-        public Employee(string name, int id, string job, double salary)
+        public Employee(string name, string id, string job, double salary)
         {
             this.name = name;
-            this.id = id;
+            SetId(id);
             this.job = job;
             this.salary = salary;
         }
@@ -43,16 +47,27 @@ namespace Employee
             {
                 Console.WriteLine($"{this.name}, {this.salary} palkka on sama kuin {employee.name}, {employee.salary}");
             }
-
-            //Console.WriteLine($"Kutsuva olio: {this.name} {this.salary}");
-
-            //Console.WriteLine($"Parametrinä tuleva olio: {employee.name} {employee.salary}");
+                        //tässä verrataan palkkoja
 
         }
 
         public void PrintEmployeeInfo()
         {
             Console.WriteLine(this.ToString());
+        }
+
+        public void SetId(string idValue)
+        {
+            //tarkistaa tässä onko ID viisi merkkiä pitkä
+            if (idValue.Length == 5)
+            {
+                this.id = idValue;
+            }
+            else
+            {
+                this.id = "Not valid, set 5 number ID";
+            }
+
         }
     }
 }
