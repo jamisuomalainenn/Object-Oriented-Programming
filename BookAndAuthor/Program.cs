@@ -8,19 +8,27 @@ namespace BookAndAuthor
         {
             Console.WriteLine("Tehtävä Book!");
 
-            Book book1 = new Book("Jami SUomalainen", "Jere Suomalainen", "Otava", 20.00, );
-            book1.name = "Witcher";
+            Book1 book1 = new Book1($"Jami Suomalainen", "Jere Suomalainen", "Suomalaisten Kirjat Oy", 20.00, "9781345");
+            Book1 book2 = new Book1($"Linnut eivät lennä", "Jukuri Veiterä", "Tuotantoyhtiö", 37.50, "78412312");
+            Book1 book3 = new Book1($"Witcher", "Andrzej Sapkowski", "Otava", 95.00, "97841231");
 
-            //Book book2 = new Book("Witcher");
+            Console.WriteLine($"Nämä kirjat ovat kategoriassa: {Book1.theme}");
 
-            //Console.WriteLine($"kirjan nimi on: {book1.name}");
-            //Console.WriteLine($"Book-luokan counter = {Book.counter}");
+            Console.WriteLine();
+            book3.GetBookDetails("97841231");
+            Console.WriteLine();
 
-            //Console.WriteLine($"{book2.Id}. kirjan nimi on: {book2.Name}");
-            //Console.WriteLine($"Book-luokan counter = {Book.counter}");
+            Book1.ChangeTheme("Fiktio");
+            Console.WriteLine($"Nämä kirjat ovat kategoriassa: {Book1.theme}");
 
-            Author author1 = new Author("Jami Suomalainen", "1.1.1998", book1);
-            author1.PrintInfo();
+            book1.GetBookDetails("9781345");
+            Console.WriteLine();
+            book2.GetBookDetails("978412312");
+            Console.WriteLine();
+
+            Console.WriteLine(book1.Author);
+            Console.WriteLine(book3.Author);
+
         }
     }
 }

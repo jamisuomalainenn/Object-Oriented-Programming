@@ -13,7 +13,7 @@ namespace BookAndAuthor
         public string publisher;
         private double price;
         private string isbn;
-        public static string theme = "fantasia";
+        public static string theme = "Fantasia";
 
         public Book1()
         {
@@ -77,11 +77,11 @@ namespace BookAndAuthor
         {
             if (IsbnValue == this.Isbn)
             {
-                Console.WriteLine($"Kirjan tiedot: {this.name}, {this.author}, {this.publisher}, {this.price}, {this.isbn}");
+                Console.WriteLine($"Kirjan tiedot: \nNimi: {this.name}\nKirjoittaja:  {this.author}\nJulkaisija: {this.publisher}\nHinta:  {this.price}\nISBN-Tunnus: {this.isbn}");
             }
             else
             {
-                Console.WriteLine("Tietoja ei voi tulostaa.");
+                Console.WriteLine($"Kirjan '{this.name}' tietoja ei voi tulostaa! Tarkasta ISBN sekä PREFIX!!!");
             }
         }
 

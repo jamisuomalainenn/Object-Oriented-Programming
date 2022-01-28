@@ -8,7 +8,7 @@ namespace BookAndAuthor
     {
         public string name;
         public string birthday;
-        public Book book;
+        public Book1 book;
 
         public Author()
         {
@@ -17,7 +17,7 @@ namespace BookAndAuthor
             this.book = null;
         }
 
-        public Author(string name, string birthday, Book book)
+        public Author(string name, string birthday, Book1 book)
         {
             this.name = name;
             this.birthday = birthday;
