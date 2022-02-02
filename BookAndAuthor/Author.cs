@@ -14,7 +14,7 @@ namespace BookAndAuthor
         {
             this.name = string.Empty;
             this.birthday = string.Empty;
-            this.Book = null;
+            this.Book = Book1;
         }
 
         public Author(string name, string birthday, Book1 book)
