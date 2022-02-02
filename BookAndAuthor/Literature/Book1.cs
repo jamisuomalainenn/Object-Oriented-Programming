@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookAndAuthor
+namespace BookAndAuthor.Literature
 {
     class Book1
     {
@@ -91,7 +91,7 @@ namespace BookAndAuthor
         }
         public override string ToString()
         {
-            return $"{this.name}, {this.Author}";
+            return $"{this.name}";
         }
         
     }

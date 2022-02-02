@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BookAndAuthor.Literature;
 
 namespace BookAndAuthor
 {
@@ -8,13 +9,13 @@ namespace BookAndAuthor
     {
         public string name;
         public string birthday;
-        private Book1 book;
+        public Book1 book;
 
         public Author()
         {
             this.name = string.Empty;
             this.birthday = string.Empty;
-            this.Book = Book1;
+            this.Book = null;
         }
 
         public Author(string name, string birthday, Book1 book)
@@ -24,21 +25,22 @@ namespace BookAndAuthor
             this.Book = book;
         }
 
-        internal Book1 Book {
+        public Book1 Book
+        {
             get { return book; }
             set
             {
-                if (value.name == book.name)
+                if (value.Author == this.name)
                 {
                     book = value;
                 }
                 else
                 {
-                    Console.WriteLine("Tietoja ei tallennettu.");
+                    Console.WriteLine("Kirjan tietoja ei tallennettu.");
                 }
             }
 
-                }
+        }
 
         public void PrintInfo()
         {
