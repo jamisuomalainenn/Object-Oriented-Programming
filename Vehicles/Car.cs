@@ -31,5 +31,15 @@ namespace Vehicles
         {
             Console.WriteLine("Lapsiluokan muodostin: " + msg);
         }
+
+        public override string ToString()
+        {
+            return $"\n\nEngine size: {this.engine}\n Car type: {this.type}\n Number of doors: {this.doors}";
+        }
+
+        public void PrintCarInformation()
+        {
+            Console.WriteLine(this.ToString());
+        }
     }
 }

@@ -34,6 +34,15 @@ namespace Vehicles
             Console.WriteLine("Kantaluokan muodostin: " + msg);
         }
 
+        public override string ToString()
+        {
+            return $"\n\nBrand: {this.brand}\n Model: {this.model}\n Model's year: {this.modelYear}\n Price: {this.price}";
+        }
+
+        public void PrintVehicleInformation()
+        {
+            Console.WriteLine(this.ToString());
+        }
     }
        
 }
