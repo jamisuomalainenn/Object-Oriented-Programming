@@ -6,5 +6,20 @@ namespace Vehicles
 {
     class Vehicle
     {
+       public Vehicle()
+        {
+            Console.WriteLine("Kantaluokan muodostin");
+        }
+
+        //konstruktori
+        public Vehicle(string msg)
+        {
+            Console.WriteLine("Kantaluokan muodostin: " + msg);
+        }
+
     }
+       
 }
+    
+    
+
