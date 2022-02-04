@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee", "Employee\Employ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookAndAuthor", "BookAndAuthor\BookAndAuthor.csproj", "{9F980D28-B34F-4BCF-A796-08D6AA2B2F4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles", "Vehicles\Vehicles.csproj", "{031CBB10-1053-431F-9B08-07F5F5DF0C75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicles", "Vehicles\Vehicles.csproj", "{031CBB10-1053-431F-9B08-07F5F5DF0C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rajapinta", "Rajapinta\Rajapinta.csproj", "{A770D270-C680-4E44-9B97-49EA7B78D7C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj", "{123E5F38-AD14-4E65-93C9-F08B5C718C80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{031CBB10-1053-431F-9B08-07F5F5DF0C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031CBB10-1053-431F-9B08-07F5F5DF0C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031CBB10-1053-431F-9B08-07F5F5DF0C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A770D270-C680-4E44-9B97-49EA7B78D7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A770D270-C680-4E44-9B97-49EA7B78D7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A770D270-C680-4E44-9B97-49EA7B78D7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A770D270-C680-4E44-9B97-49EA7B78D7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123E5F38-AD14-4E65-93C9-F08B5C718C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123E5F38-AD14-4E65-93C9-F08B5C718C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123E5F38-AD14-4E65-93C9-F08B5C718C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123E5F38-AD14-4E65-93C9-F08B5C718C80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
