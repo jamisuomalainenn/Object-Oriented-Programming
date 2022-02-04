@@ -13,7 +13,7 @@ namespace Vehicles
        //konstruktori
        public Car()
         {
-            Console.WriteLine("Lapsiluokan muodostin");
+            
             this.engine = 0;
             this.type = string.Empty;
             this.doors = 0;
@@ -37,8 +37,9 @@ namespace Vehicles
             return $"\n{base.ToString()}, {this.engine}, {this.type}, {this.doors}";
         }
 
-        public virtual void PrintCarInformation()
+        public override void PrintInformation()
         {
+            base.PrintInformation();
             Console.WriteLine($"\nMoottorin litratilavuus: {this.engine}\nAjoneuvotyyppi: {this.type}\nOvien lukumäärä: {this.doors}");
         }
 
@@ -59,5 +60,10 @@ namespace Vehicles
         {
             Console.WriteLine($"Keltainen");
         }
+
+        //public override void PrintInformation()
+        //{
+        //    base.PrintInformation();
+        //}
     }
 }

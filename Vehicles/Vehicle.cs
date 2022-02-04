@@ -41,7 +41,7 @@ namespace Vehicles
             return $"\n{this.brand}, {this.model}, {this.modelYear}, {this.price}";
         }
 
-        public virtual void PrintVehicleInformation()
+        public virtual void PrintInformation()
         {
             Console.WriteLine( $"\n\nBrand: {this.brand}\n Model: {this.model}\n Model's year: {this.modelYear}\n Price: {this.price}");
         }
