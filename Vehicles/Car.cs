@@ -25,12 +25,7 @@ namespace Vehicles
             this.type = type;
             this.doors = doors;
         }
-
-        //konstruktori, kutsuu kantaluokan muodostinta parametrilla
-        public Car(string msg) : base(msg)
-        {
-            Console.WriteLine("Lapsiluokan muodostin: " + msg);
-        }
+        
 
         public override string ToString()
         {

@@ -20,7 +20,7 @@ namespace Vehicles
             this.load = load;
             this.consumption = consumption;
         }
-
+        
         public override void PrintInformation()
         {
             base.PrintInformation();

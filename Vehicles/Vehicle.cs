@@ -20,6 +20,8 @@ namespace Vehicles
             this.price = 0;
         }
 
+        
+
         public Vehicle(string brand, string model, int modelYear, double price)
         {
             this.brand = brand;
