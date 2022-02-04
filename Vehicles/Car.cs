@@ -19,7 +19,7 @@ namespace Vehicles
             this.doors = 0;
         }
 
-        public Car(double engine, string type, int doors)
+        public Car(string brand, string model, int modelYear, double price, double engine, string type, int doors) : base(brand, model, modelYear, price)
         {
             this.engine = engine;
             this.type = type;
@@ -34,12 +34,30 @@ namespace Vehicles
 
         public override string ToString()
         {
-            return $"\n\nEngine size: {this.engine}\n Car type: {this.type}\n Number of doors: {this.doors}";
+            return $"\n{base.ToString()}, {this.engine}, {this.type}, {this.doors}";
         }
 
-        public void PrintCarInformation()
+        public virtual void PrintCarInformation()
         {
-            Console.WriteLine(this.ToString());
+            Console.WriteLine($"\nMoottorin litratilavuus: {this.engine}\nAjoneuvotyyppi: {this.type}\nOvien lukumäärä: {this.doors}");
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Car car && 
+                this.engine == car.engine &&
+                this.type == car.type &&
+                this.doors == car.doors;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override void Colour()
+        {
+            Console.WriteLine($"Keltainen");
         }
     }
 }

@@ -8,8 +8,7 @@ namespace BookExercise
         {
             Console.WriteLine("This is Book exercise!");
             Book book1 = new Book("Matematiikka 1 ", "Salonen Matti", "00001", 15.99);
-                                                                                        //Kommentoitu osio on korvattu nopeammalla
-                                                                                        //tavalla. Näin saadaan koodi yhdelle riville ja saadaan tilaa
+                                                                                        
             
             Console.WriteLine("Ensimmäinen kirja: " + book1.title + book1.id);
             
@@ -18,13 +17,15 @@ namespace BookExercise
 
             Book book3 = new Book("Witcher", "Rosa Nurminen", "00003", 25.90);
             Console.WriteLine("Kolmas kirja: " + book3.title + book3.id);
-            //Console.WriteLine(book3.GetBookInformation());
+            Console.WriteLine(book3.GetBookInformation());
 
             book3.CompareBook(book2);
 
             book2.CompareBook(book3);
 
             book1.CompareBook(book2);
+
+            //Console.WriteLine(book1.GetBookInformation());
         }
     }
 }
