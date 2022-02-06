@@ -30,8 +30,6 @@ namespace Vehicles
         public double CalculateConsumption()
         {
             return this.load * this.consumption;
-            //double perKG = this.load * this.consumption;
-            //Console.WriteLine("Kuorma-auton kulutus on: " + perKG + " litraa / kg");
         }
     }
     
