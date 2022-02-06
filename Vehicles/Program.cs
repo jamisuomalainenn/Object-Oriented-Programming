@@ -7,12 +7,13 @@ namespace Vehicles
         static void Main(string[] args)
         {
             //Kommenteissa on tehtävän ''Osa 1'' Vehicle-luokan luodut oliot.
+            
             //Vehicle vehicle1 = new Vehicle("Audi", "A4", 2008, 8990);
             //Vehicle vehicle2 = new Vehicle("Ford", "Sierra", 1990, 1500);               
             //Vehicle vehicle3 = new Vehicle("Mercedes-Benz", "C", 2004, 4000);
 
 
-            
+            //tässä car-luokan oliot:
             Car car1 = new Car("Audi", "A4", 2008, 8990, 1.8, "Henkilöauto", 5);
             Car car2 = new Car("Ford", "Focus", 1990, 1500, 2.0, "Henkilöauto", 5);
             Car car3 = new Car("Mercedes-Benz", "C", 2004, 4000, 1.8, "Henkilöauto", 5);
@@ -20,7 +21,7 @@ namespace Vehicles
             
             
             
-            //seuraava kommentti on tehtävän ''Osa1'' Vehicle-luokan kutsuttu metodi.
+            //seuraava kommentti on tehtävän ''Osa1'' Vehicle-luokan kutsuttu metodi. Ja perässä car-luokan kutsuttu metodi.
             //vehicle1.PrintVehicleInformation();
             car1.PrintInformation();
 
@@ -31,7 +32,7 @@ namespace Vehicles
             car3.PrintInformation();
 
             
-            
+            // Osa 2, ToString- ja Equalds-metodien kutsu:
             
             Console.WriteLine(car3.ToString());
 
@@ -52,17 +53,17 @@ namespace Vehicles
             
             
             //Osa 4, kuorma-auto-olio sekä kulutus-metodin kutsu:
-            Truck truck1 = new Truck("Daf", "F30", 2019, 200000, 6.8, "Kuorma-auto", 2, 2500, 30);
+            Truck truck1 = new Truck("Daf", "F30", 2019, 200000, 6.8, "Kuorma-auto", 2, 2500, 8);
             truck1.PrintInformation();
 
-            truck1.CalculateConsumption();  //järjetön kulutus!!
+            Console.WriteLine("Kulutus: " + truck1.CalculateConsumption() + " l/kg");  //tehtävänannon mukaisesti tehty kulutuksen laskenta, vaikkei siinä olekaan mitään järkeä :D
 
             
             
             //Osa 4, tyyppimuunnokset:
             
             Console.WriteLine("____________________________________________________");
-            Truck truckA = new Truck("Scania", "Koukku", 1990, 19000, 5.0, "Kuorma-auto", 2, 3000, 13);
+            Truck truckA = new Truck("Scania", "R500", 1990, 19000, 5.0, "Kuorma-auto", 2, 3000, 13);
             Car carA = truckA as Car;
 
             if (carA != null)
@@ -77,10 +78,10 @@ namespace Vehicles
             Console.WriteLine("____________________________________________________");
 
 
-            Car carB = new Car("Volvo", "S60", 2005, 2950, 2.5, "Henkilöauto", 5);
-            Truck truckB = carB as Truck;
+            Car carB = new Car("Volvo", "S60", 2005, 2950, 2.5, "Henkilöauto", 5);                              //tässä tyyppimuunnos ei onnistu, koska autolla
+            Truck truckB = carB as Truck;                                                                       //ei ole tarvittavia ominaisuuksia ollakseen kuorma-auto
 
-            if (carB != null)
+            if (truckB != null)
             {
                 Console.WriteLine("\nHenkilöautosta muutettu kuorma-auto.");
                 Console.WriteLine("Car ---> Truck: " + carB.ToString());

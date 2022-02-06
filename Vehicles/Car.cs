@@ -13,7 +13,6 @@ namespace Vehicles
        //konstruktori
        public Car()
         {
-            
             this.engine = 0;
             this.type = string.Empty;
             this.doors = 0;
@@ -56,9 +55,5 @@ namespace Vehicles
             Console.WriteLine($"Keltainen");
         }
 
-        //public override void PrintInformation()
-        //{
-        //    base.PrintInformation();
-        //}
     }
 }

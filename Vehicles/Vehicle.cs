@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vehicles
 {
-    abstract class Vehicle
+    abstract class Vehicle   //osa 3, vehicle luokka muutettu abstractiksi
     {
         protected string brand;
         protected string model;

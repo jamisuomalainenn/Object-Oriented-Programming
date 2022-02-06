@@ -24,13 +24,14 @@ namespace Vehicles
         public override void PrintInformation()
         {
             base.PrintInformation();
-            Console.WriteLine($"\nKuorma: {this.load}\nKulutus: {this.consumption}");
+            Console.WriteLine($"\nKuorma: {this.load}\nKulutus per KG: {this.consumption}");
         }
 
-        public void CalculateConsumption()
+        public double CalculateConsumption()
         {
-            double perKG = this.load * this.consumption;
-            Console.WriteLine("Kuorma-auton kulutus on: " + perKG + " litraa / kg");
+            return this.load * this.consumption;
+            //double perKG = this.load * this.consumption;
+            //Console.WriteLine("Kuorma-auton kulutus on: " + perKG + " litraa / kg");
         }
     }
     
