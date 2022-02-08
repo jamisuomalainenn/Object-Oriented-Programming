@@ -7,7 +7,7 @@ namespace Store
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("---- Interface/Product Example!");
+            
             List<Product> productsList = new List<Product>();
             productsList.Add(new Product("Huppari", 59.99, 36));
             productsList.Add(new Product("Kengät", 109.99, 77));
@@ -18,7 +18,7 @@ namespace Store
                 if(currentProduct.GetProduct("T-Paita") != null)
                 {
                     Console.WriteLine("--------  ");
-                    Console.WriteLine("\nT-Paita löytyi");
+                    Console.WriteLine("T-Paita löytyi");
                     Console.WriteLine($"Varaston arvo: {currentProduct.CalculateTotal()}");
                     Console.WriteLine("--------  ");
                 }

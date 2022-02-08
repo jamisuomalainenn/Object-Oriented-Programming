@@ -97,7 +97,7 @@ namespace BookAndAuthor.Literature
             return $"{this.name}, {this.price}";
         }
 
-        public int CompareTo([AllowNull] Book other)
+        public int CompareTo([AllowNull] Book other)       //// IComparable rajapinta - Tehtävä
         {
             return this.price.CompareTo(other.price);
         }

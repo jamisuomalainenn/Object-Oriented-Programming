@@ -51,7 +51,7 @@ namespace BookAndAuthor
 
 
             Console.WriteLine("________________________________________________________");
-            List<Book> books = new List<Book>();
+            List<Book> books = new List<Book>();                            // IComparable rajapinta - Tehtävä
 
             books.Add(new Book($"Huono kirja", "Kirjailija Kippars", "Otava", 19.99, "9781346"));
             books.Add(new Book($"Hyvä kirja", "Kirjailija Kappars", "Atava", 9.99, "9781335"));
