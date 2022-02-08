@@ -9,7 +9,7 @@ namespace BookAndAuthor
     {
         public string name;
         public string birthday;
-        public Book1 book;
+        public Book book;
 
         public Author()
         {
@@ -18,19 +18,19 @@ namespace BookAndAuthor
             this.Book = null;
         }
 
-        public Author(string name, string birthday, Book1 book)
+        public Author(string name, string birthday, Book book)
         {
             this.name = name;
             this.birthday = birthday;
             this.Book = book;
         }
 
-        public Book1 Book
+        public Book Book
         {
             get { return book; }
             set
             {
-                if (value.Author == this.name)
+                if (value != null && value.Author == this.name)
                 {
                     book = value;
                 }

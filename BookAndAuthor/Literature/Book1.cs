@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace BookAndAuthor.Literature
 {
-    class Book1
+    class Book : IComparable<Book>
     {
         private const int MaxLength = 13;
         private const string Prefix = "978";
@@ -15,7 +16,7 @@ namespace BookAndAuthor.Literature
         private string isbn;
         public static string theme = "Fantasia";
 
-        public Book1()
+        public Book()
         {
             this.name = string.Empty;
             this.author = string.Empty;
@@ -24,7 +25,7 @@ namespace BookAndAuthor.Literature
             this.Isbn = string.Empty;
         }
 
-        public Book1(string name, string author, string publisher, double price, string isbn)
+        public Book(string name, string author, string publisher, double price, string isbn)
         {
             this.name = name;
             this.author = author;
@@ -33,7 +34,8 @@ namespace BookAndAuthor.Literature
             this.Isbn = isbn;
         }
 
-        public string Isbn {
+        public string Isbn
+        {
             get { return isbn; }
             set
             {
@@ -43,6 +45,7 @@ namespace BookAndAuthor.Literature
                 }
                 else if (value.StartsWith(Prefix))
                 {
+                    
                     isbn = value;
                 }
                 else
@@ -91,8 +94,12 @@ namespace BookAndAuthor.Literature
         }
         public override string ToString()
         {
-            return $"{this.name}";
+            return $"{this.name}, {this.price}";
         }
-        
+
+        public int CompareTo([AllowNull] Book other)
+        {
+            return this.price.CompareTo(other.price);
+        }
     }
 }
