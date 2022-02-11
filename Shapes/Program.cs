@@ -12,7 +12,7 @@ namespace Shapes
             {
                 new Circle("red", 6),
                 new Circle("blue", 2)
-                new Triangle("blue", 2, 2)
+                //new Triangle("blue", 2, 2)
             };
 
             foreach (Shape s in allShapes)

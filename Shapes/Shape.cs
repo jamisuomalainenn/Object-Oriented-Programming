@@ -27,5 +27,10 @@ namespace Shapes
         {
             return this.colour;
         }
+
+        public virtual string GetInfo()
+        {
+            return $"Colour: {this.colour}\nType: {this.type}";
+        }
     }
 }
