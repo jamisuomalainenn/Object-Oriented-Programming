@@ -25,7 +25,7 @@ namespace Shapes
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            return this.width * this.lenght / 2;
         }
     }
 }
