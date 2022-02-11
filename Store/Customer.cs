@@ -15,6 +15,11 @@ namespace Store
             this.purchases = purchases;
         }
 
+        public Customer AddCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
         public double GetBonus()
         {
             if (this.purchases < 1000)
@@ -36,11 +41,32 @@ namespace Store
         }
 
         public Customer GetCustomer(string name)
-        { return null; }
+        {
+            if (this.name == name)
+            {
+                return this;
+            }
+            return null; 
+        }
+
+        public Customer PrintCustomers()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString()
         {
             return $"{this.name}, {this.purchases}";
+        }
+
+        void ICustomer.AddCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICustomer.PrintCustomers()
+        {
+            throw new NotImplementedException();
         }
     }
 }

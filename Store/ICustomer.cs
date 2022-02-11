@@ -8,7 +8,9 @@ namespace Store
     {
         Customer GetCustomer(string name);
         double GetBonus();
-        
+        void AddCustomer(Customer customer);
+
+        void PrintCustomers();
 
     }
 }
