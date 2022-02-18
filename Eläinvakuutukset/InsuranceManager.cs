@@ -75,7 +75,7 @@ namespace Eläinvakuutukset
                     //Console.WriteLine(species);
                     //Console.WriteLine(insurance.species);
                     Console.WriteLine(species + ": " + insurance.name + ", vakuutusmaksu " + insurance.fee + " €\n");
-                    
+                 
                 }
             }
         }
