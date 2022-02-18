@@ -6,25 +6,17 @@ namespace Eläinvakuutukset
 {
     class InsuranceManager
     {
-        //public void AddInsurance(string v1, string v2, bool v3)
-        //{
-        //    return $"{this.ToString()}";
-        //}
         public List<Insurance> allInsurances = new List<Insurance>();
 
-        public InsuranceManager()
-        {
-            
-        }
 
-
-        public void AddInsurance(string animal, string name, bool isNeutered) // metodilla 3 parametria
+        public void AddInsurance(string animal, string name, bool isNeutered) 
         {
             Console.WriteLine($"ANIMAL: {animal}, NAME: {name}, NEUTERED: {isNeutered}, FEE: {GetFee(animal, isNeutered)}");
             allInsurances.Add(new Insurance(animal, name, isNeutered, GetFee(animal, isNeutered)));
         }
 
-        public double GetFee(string animal, bool isNeutered) // metodilla 2 parametria
+
+        public double GetFee(string animal, bool isNeutered)
         {
             if (animal == "koira" && isNeutered == true)
             {
@@ -53,6 +45,7 @@ namespace Eläinvakuutukset
             return 0;
         }
 
+
         public void PrintInsurances()
         {
             Console.WriteLine($"\nvakuutuksia yhteensä " + allInsurances.Count);
@@ -65,17 +58,15 @@ namespace Eläinvakuutukset
             }
         }
 
-        public void FindInsurances(string species, bool isNeutered) // metodilla 2 parametria
+
+        public void FindInsurances(string species, bool isNeutered) 
         {
             Console.WriteLine("löytyi:\n");
             foreach (Insurance insurance in allInsurances)
             {
-                if (insurance.species == species && insurance.neutered == isNeutered)
+                if (insurance._species == species && insurance._neutered == isNeutered)
                 {
-                    //Console.WriteLine(species);
-                    //Console.WriteLine(insurance.species);
-                    Console.WriteLine(species + ": " + insurance.name + ", vakuutusmaksu " + insurance.fee + " €\n");
-                 
+                    Console.WriteLine(species + ": " + insurance._name + ", vakuutusmaksu " + insurance._fee + " €\n");
                 }
             }
         }
