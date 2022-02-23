@@ -69,6 +69,12 @@ namespace Eläinvakuutukset
                     Console.WriteLine(species + ": " + insurance._name + ", vakuutusmaksu " + insurance._fee + " €\n");
                 }
             }
+
+
+            //Laita tuo alempi rivi mainiin niin toimii euron merkitkin.
+            
+            //Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         }
     }
 }

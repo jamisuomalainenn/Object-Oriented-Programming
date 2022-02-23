@@ -112,16 +112,8 @@ namespace FileExercise
                );
 
 
-
-
                 //string json = JsonSerializer.Serialize(bookList);
                 File.WriteAllText(@"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt", JsonConvert.SerializeObject(bookList));
-
-                //List<Book> bookListt = new List<Book>();
-                //bookList.Add(new Book("Fingerpori", "Pertti Jarla", "978123123", 17.95));
-                //bookList.Add(new Book("Witcher", "Rosa Nurminen", "9781234103", 25.90));
-                //bookList.Add(new Book("Aapinen", "Aaltonen Antti", "9781", 20.00));
-
 
                 // File.WriteAllText(string path, string contents);
                 // JsonConvert.SerializeObject(Object value);
@@ -131,13 +123,52 @@ namespace FileExercise
 
             }
 
-            static void ReadJsonFile()
+
+
+            static void ReadJsonFile() 
             {
                 Console.WriteLine("\nReading Json data from books.txt file");
+
+                List<Book> bookList = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(@"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt", System.Text.Encoding.UTF8));
+                Console.WriteLine(bookList);
+
+                File.WriteAllText(@"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt", JsonConvert.SerializeObject(bookList));
+
+                //for (int i = 0; i < bookList.Count; i++)
+                //{
+                //    Console.WriteLine(bookList[i]);
+                //}
+                var pathh = @"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt";
+                string jjsonFile = File.ReadAllText(pathh);
+                //Book b = JsonConvert.DeserializeObject<Book>(jjsonFile);
+               //foreach (var item in b.title)
+               // {
+               //     Console.WriteLine($"{ item }");
+               // }
+
+
+
+                //en osannut näitä jsoneja tehdä...
+
+
+
+
+                String path = @"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt";
+
+                String lines;
+                lines = File.ReadAllText(path);
+                Console.WriteLine(lines);
+
+                Console.ReadKey();
+
 
                 const string jsonFile = @"C:\Users\jamis\Source\Repos\OlioOhjelmointi\FileExercise\books.txt";
 
                 // File.ReadAllText(string path, E
+
+
+
+               
             }
 
             }
